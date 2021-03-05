@@ -1,5 +1,6 @@
 {
-  all_games: @all_games,
+  games: @all_games,
+
 }
 
 # figure out how to get single data if needed but this shows all the games next we gotta figure out users and other stuff
