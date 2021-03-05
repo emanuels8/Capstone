@@ -1,6 +1,3 @@
-{
-  games: @all_games,
-
-}
-
-# figure out how to get single data if needed but this shows all the games next we gotta figure out users and other stuff
+@all_games.map do |game|
+  render partial: "game.json.jb", locals: { game: game }
+end
