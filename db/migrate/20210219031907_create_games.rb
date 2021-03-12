@@ -4,6 +4,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.string :name
       t.decimal :price, precision: 9, scale: 2
       t.string :cover_art
+      t.text :description
       # t.string :studio_id
 
       t.timestamps
