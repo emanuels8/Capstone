@@ -1,0 +1,8 @@
+{
+  id: @review.id,
+  user_id: @review.user_id,
+  game_id: @review.game_id,
+  description: @review.description,
+  rating: @review.rating,
+
+}

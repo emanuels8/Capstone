@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "/games" => "games#index"
     get "/games/:id" => "games#show"
     get "/reviews" => "review#index"
+    get "/reviews/:id" => "review#show"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
   end
