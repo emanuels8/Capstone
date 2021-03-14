@@ -6,9 +6,13 @@ class Api::GamesController < ApplicationController
 
   def show
     @game = Game.find_by(id: params["id"])
-    @user = User.find_by(id: params["id"]).review
-    @username = User.find_by(id: params["id"]).username
-    @review = Game.find_by(id: params["id"]).review
+    @review_info = Game.find_by(id: params["id"]).review
+
+    @review_usernames = Review.all.map { |review|
+      if @game.id == review.game_id
+        review.user.username
+      end
+    }
     render "show.json.jb"
   end
 end
