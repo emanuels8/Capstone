@@ -13,6 +13,7 @@ class Api::GamesController < ApplicationController
         review.user.username
       end
     }
+    @review_usernames = @review_usernames.compact
     render "show.json.jb"
   end
 end

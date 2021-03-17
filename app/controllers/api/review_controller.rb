@@ -8,4 +8,15 @@ class Api::ReviewController < ApplicationController
     @review = Review.find_by(id: params["id"])
     render "show.json.jb"
   end
+
+  def create
+    @review = Review.new(
+      user_id: params[:user_id],
+      game_id: params[:game_id],
+      description: params[:description],
+      rating: params[:rating],
+    )
+    @review.save
+    render "show.json.jb"
+  end
 end
