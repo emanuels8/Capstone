@@ -5,7 +5,7 @@
   cover_art: @game.cover_art,
   description: @game.description,
   genre_name: @genre_name,
-  review_info: @review_info,
-  review_usernames: @review_usernames,
-  users: @users,
+  # info: @info,
+  final_array: @array,
+
 }
