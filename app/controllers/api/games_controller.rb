@@ -5,6 +5,11 @@ class Api::GamesController < ApplicationController
   end
 
   def show
+    @genre_name = []
+    @genre = Game.find_by(id: params["id"]).game_genre.all.map { |genre|
+      @genre_name << genre.genre.name
+    }
+
     @game = Game.find_by(id: params["id"])
     @review_info = Game.find_by(id: params["id"]).review
 
@@ -17,3 +22,5 @@ class Api::GamesController < ApplicationController
     render "show.json.jb"
   end
 end
+
+# Game.first.game_genre.first.genre.name
