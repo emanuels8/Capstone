@@ -5,7 +5,6 @@
   cover_art: @game.cover_art,
   description: @game.description,
   genre_name: @genre_name,
-  # info: @info,
-  final_array: @array,
+  Reviews: @array,
 
 }
