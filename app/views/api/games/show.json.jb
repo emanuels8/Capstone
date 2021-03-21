@@ -6,5 +6,10 @@
   description: @game.description,
   genre_name: @genre_name,
   Reviews: @array,
+  rpg: @rpg,
+  survival: @survival,
+  single_player: @single_player,
+  platform: @platform,
+  avg_rating: @avg_rating,
 
 }

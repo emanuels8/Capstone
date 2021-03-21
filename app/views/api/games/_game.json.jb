@@ -1,7 +1,0 @@
-{
-  id: game.id,
-  name: game.name,
-  price: game.price,
-  cover_art: game.cover_art,
-  description: game.description,
-}

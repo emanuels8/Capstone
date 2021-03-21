@@ -1,3 +1,9 @@
 @all_games.map do |game|
-  render partial: "game.json.jb", locals: { game: game }
+  {
+    id: game.id,
+    name: game.name,
+    price: game.price,
+    cover_art: game.cover_art,
+    description: game.description,
+  }
 end

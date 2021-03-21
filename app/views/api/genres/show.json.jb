@@ -1,0 +1,6 @@
+{
+  single_player: @single_player,
+  survival: @survival,
+  platform: @platform,
+  rpg: @rpg,
+}
