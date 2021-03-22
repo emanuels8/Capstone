@@ -4,7 +4,7 @@
   price: @game.price,
   cover_art: @game.cover_art,
   description: @game.description,
-  genre_name: @genre_name,
+  genres: @game.genres,
   Reviews: @array,
   rpg: @rpg,
   survival: @survival,

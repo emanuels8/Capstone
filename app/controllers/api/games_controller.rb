@@ -11,7 +11,7 @@ class Api::GamesController < ApplicationController
     @review_info = []
     @array = []
     @info = {}
-    @genre = Game.find_by(id: params["id"]).game_genre.all.map { |genre|
+    @genre = Game.find_by(id: params["id"]).game_genres.all.map { |genre|
       @genre_name << genre.genre.name
     }
     @test = Review.where(game_id: params["id"])
