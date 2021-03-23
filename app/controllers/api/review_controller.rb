@@ -9,14 +9,19 @@ class Api::ReviewController < ApplicationController
     render "show.json.jb"
   end
 
+  # @game = Game.find_by(id: params["id"])
+
   def create
     @review = Review.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       game_id: params[:game_id],
       description: params[:description],
       rating: params[:rating],
     )
-    @review.save
-    render "show.json.jb"
+    if @review.save
+      render "show.json.jb"
+    else
+      render json: { errors: @review.errors.full_messages }, status: 422
+    end
   end
 end
