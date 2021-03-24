@@ -1,0 +1,8 @@
+{
+  username: @username,
+  game_cover_art: @game_cover_art,
+  second_game_cover_art: @second_game_cover_art,
+  third_game_cover_art: @third_game_cover_art,
+  fourth_game_cover_art: @fourth_game_cover_art,
+
+}

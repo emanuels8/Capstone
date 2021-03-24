@@ -6,5 +6,6 @@
     cover_art: game.cover_art,
     description: game.description,
     genres: game.genres,
+    rating: game.rating,
   }
 end

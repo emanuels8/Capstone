@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get "/games/:id" => "games#show"
     get "/reviews" => "review#index"
     get "/reviews/:id" => "review#show"
+    get "/user/" => "users#index"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
     post "/reviews" => "review#create"
