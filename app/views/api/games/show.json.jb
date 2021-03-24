@@ -5,6 +5,8 @@
   cover_art: @game.cover_art,
   description: @game.description,
   genres: @game.genres,
+  image2: @game.image2,
+  image: @game.image,
   Reviews: @array,
   rpg: @rpg,
   survival: @survival,
