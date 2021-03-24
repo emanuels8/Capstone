@@ -16,19 +16,18 @@ class Api::GamesController < ApplicationController
     }
     @test = Review.where(game_id: params["id"])
     @game = Game.find_by(id: params["id"])
-    if Game.first.id == Review.first.game_id
-      Review.where(game_id: params["id"]).all.map { |review|
-        (@info[:username] = review.user.username)
-        (@info[:user_id] = review.user.id)
-        (@info[:description] = review.description)
-        (@info[:rating] = review.rating)
-        @array.push(@info)
-        @info = {}
-        @avg_rating = (@avg_rating + review.rating)
-      }
-      @avg_rating = @avg_rating / (@test.length * 1.00)
-      @avg_rating = @avg_rating.round(1)
-    end
+
+    Review.where(game_id: params["id"]).all.map { |review|
+      (@info[:username] = review.user.username)
+      (@info[:user_id] = review.user.id)
+      (@info[:description] = review.description)
+      (@info[:rating] = review.rating)
+      @array.push(@info)
+      @info = {}
+      @avg_rating = (@avg_rating + review.rating)
+    }
+    @avg_rating = @avg_rating / (@test.length * 1.00)
+    @avg_rating = @avg_rating.round(1)
 
     @survival = Genre.find_by(id: 12).game.all
     @rpg = Genre.find_by(id: 7).game.all

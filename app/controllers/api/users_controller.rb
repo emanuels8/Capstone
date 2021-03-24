@@ -1,8 +1,8 @@
 class Api::UsersController < ApplicationController
   def index
     @username = User.second.username
-    @game_cover_art = User.first.reviews.first.game.cover_art
-    @second_game_cover_art = User.first.reviews.second.game.cover_art
+    @game_cover_art = Game.find_by(id: 1).cover_art
+    @second_game_cover_art = Game.find_by(id: 2).cover_art
     @third_game_cover_art = Game.find_by(id: 3).cover_art
     @fourth_game_cover_art = Game.find_by(id: 4).cover_art
   end
