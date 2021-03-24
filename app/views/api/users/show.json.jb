@@ -1,3 +1,14 @@
-# {
-#   users: @all_users,
-# }
+{
+  id: @user.id,
+  username: @user.username,
+  reviews: @user.reviews.map do |review|
+    {
+      id: review.id,
+      game: review.game,
+      rating: review.rating,
+      description: review.description,
+    }
+  end,
+  average_rating: @user.average_rating,
+
+}

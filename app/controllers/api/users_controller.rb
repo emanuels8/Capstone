@@ -7,6 +7,10 @@ class Api::UsersController < ApplicationController
     @fourth_game_cover_art = Game.find_by(id: 4).cover_art
   end
 
+  def show
+    @user = User.find_by(id: params["id"])
+  end
+
   def create
     user = User.new(
       username: params[:username],

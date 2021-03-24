@@ -19,6 +19,7 @@ class Api::GamesController < ApplicationController
     if Game.first.id == Review.first.game_id
       Review.where(game_id: params["id"]).all.map { |review|
         (@info[:username] = review.user.username)
+        (@info[:user_id] = review.user.id)
         (@info[:description] = review.description)
         (@info[:rating] = review.rating)
         @array.push(@info)

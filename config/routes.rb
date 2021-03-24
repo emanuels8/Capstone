@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get "/reviews" => "review#index"
     get "/reviews/:id" => "review#show"
     get "/user/" => "users#index"
+    get "/user/:id" => "users#show"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
     post "/reviews" => "review#create"
